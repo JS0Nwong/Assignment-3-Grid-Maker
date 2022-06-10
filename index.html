@@ -11,23 +11,18 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row grid-row">
-            <table id = "grid">
-                <tr><td>Row 1</td></tr>
-                <tr><td>Row 2</td></tr>
-                <tr><td>Row 3</td></tr>
-
-            </table>
+        <div class="grid-container" id = "grid-container">
         </div>
-        <div class="row">
+        <div class="button-row">
             <div class="buttons-container p-4">
-                <button class="button" id="add-row"><i class="fa-solid fa-plus"></i></button>
-                <button class="button" id="add-column">Add Column</button>
-                <button class="button" id="remove-row"><i class="fa-solid fa-minus"></i></button>
-                <button class="button" id="remove-column">Remove Column</button>
-                <button class="button" id="fill-grid"><i class="fa-solid fa-fill"></i></button>
-                <button class="button" id="fill-uncolored"><i class="fa-solid fa-fill-drip"></i></button>
-                <button class="button" id="clear-grid"><i class="fa-solid fa-trash"></i></button>
+                <button class="button" title = "Add Row" id="add-row"><i class="fa-solid fa-plus"></i></button>
+                <button class="button" title = "Add Column" id="add-column">Add Column</button>
+                <button class="button" title = "Remove Row" id="remove-row"><i class="fa-solid fa-minus"></i></button>
+                <button class="button" title = "Remove Column" id="remove-column">Remove Column</button>
+                <button class="button" title = "Fill Grid with color" id="fill-grid"><i class="fa-solid fa-fill"></i></button>
+                <button class="button" title = "Fill uncolored" id="fill-uncolored"><i class="fa-solid fa-fill-drip"></i></button>
+                <button class="button" title = "Clear Grid" id="clear-grid"><i class="fa-solid fa-trash"></i></button>
+                <button class="menu-open button" id = "menu-toggle"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
     </div>
