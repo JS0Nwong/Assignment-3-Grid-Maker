@@ -44,3 +44,16 @@ function addCol()
         })
     }
 }
+
+function removeRow()
+{
+    grid.lastChild.remove();
+}
+
+function removeCol()
+{
+    let getRows = document.querySelectorAll(".row");
+    getRows.forEach(function(row){
+        row.lastChild.remove();
+    })
+}
