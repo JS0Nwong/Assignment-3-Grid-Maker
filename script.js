@@ -17,9 +17,15 @@ function addRow() {
   gridRow.classList.add("row");
   gridRow.id = "row" + rowIndex;
   grid.appendChild(gridRow);
-  for (let i = 0; i <= colIndex; i++) {
+
+  if (colIndex === 0) {
+    colIndex++;
+  }
+
+  for (let i = 0; i < colIndex; i++) {
     addSquare(gridRow.id);
   }
+
   rowIndex++;
 }
 
@@ -43,18 +49,30 @@ function addSquare(rowId) {
 }
 
 function removeRow() {
-  if (rowIndex > 0) {
+  if (rowIndex > 0 && colIndex > 0) {
     grid.lastChild.remove();
     rowIndex--;
+
+    if (rowIndex === 0 || colIndex === 0) {
+      removeAllGridChildren();
+    }
   }
 }
 
 function removeCol() {
-  if (colIndex > 0) {
+  if (colIndex > 0 && rowIndex > 0) {
     let getRows = document.querySelectorAll(".row");
     getRows.forEach(function (row) {
       row.lastChild.remove();
     });
     colIndex--;
+
+    if (rowIndex === 0 || colIndex === 0) {
+      removeAllGridChildren();
+    }
   }
+}
+
+function removeAllGridChildren() {
+  grid.replaceChildren();
 }
