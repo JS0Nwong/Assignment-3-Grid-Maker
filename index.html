@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Grid maker</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container-fluid">
-        <div class="grid-container" id = "grid-container">
+      <div id="grid-container"></div>
+      <div class="button-row">
+        <div class="buttons-container p-4">
+          <button class="button" title="Add Row" id="add-row">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+          <button class="button" title="Add Column" id="add-column">
+            Add Column
+          </button>
+          <button class="button" title="Remove Row" id="remove-row">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+          <button class="button" title="Remove Column" id="remove-column">
+            Remove Column
+          </button>
+          <button class="button" title="Fill Grid with color" id="fill-grid">
+            <i class="fa-solid fa-fill"></i>
+          </button>
+          <button class="button" title="Fill uncolored" id="fill-uncolored">
+            <i class="fa-solid fa-fill-drip"></i>
+          </button>
+          <button class="button" title="Clear Grid" id="clear-grid">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <button class="menu-open button" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </button>
         </div>
-        <div class="button-row">
-            <div class="buttons-container p-4">
-                <button class="button" title = "Add Row" id="add-row"><i class="fa-solid fa-plus"></i></button>
-                <button class="button" title = "Add Column" id="add-column">Add Column</button>
-                <button class="button" title = "Remove Row" id="remove-row"><i class="fa-solid fa-minus"></i></button>
-                <button class="button" title = "Remove Column" id="remove-column">Remove Column</button>
-                <button class="button" title = "Fill Grid with color" id="fill-grid"><i class="fa-solid fa-fill"></i></button>
-                <button class="button" title = "Fill uncolored" id="fill-uncolored"><i class="fa-solid fa-fill-drip"></i></button>
-                <button class="button" title = "Clear Grid" id="clear-grid"><i class="fa-solid fa-trash"></i></button>
-                <button class="menu-open button" id = "menu-toggle"><i class="fa-solid fa-bars"></i></button>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
