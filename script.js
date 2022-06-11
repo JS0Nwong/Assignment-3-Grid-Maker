@@ -53,7 +53,7 @@ function removeRow() {
     grid.lastChild.remove();
     rowIndex--;
 
-    if (rowIndex === 0 || colIndex === 0) {
+    if (rowIndex === 0) {
       removeAllGridChildren();
     }
   }
@@ -67,7 +67,7 @@ function removeCol() {
     });
     colIndex--;
 
-    if (rowIndex === 0 || colIndex === 0) {
+    if (colIndex === 0) {
       removeAllGridChildren();
     }
   }
@@ -75,4 +75,6 @@ function removeCol() {
 
 function removeAllGridChildren() {
   grid.replaceChildren();
+  colIndex = 0;
+  rowIndex = 0;
 }
