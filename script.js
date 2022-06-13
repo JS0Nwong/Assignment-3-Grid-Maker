@@ -17,6 +17,9 @@ fill.addEventListener("click", fillGrid);
 fillUncolored.addEventListener("click", fillUncoloredGrid);
 clearGridBtn.addEventListener("click", clearGrid);
 
+let menu = document.getElementById("menu-toggle");
+menu.addEventListener("click", menuToggle);
+
 let rowIndex = 0;
 let colIndex = 0;
 
@@ -52,6 +55,10 @@ function addSquare(rowId) {
   let gridRow = document.querySelector(`#${rowId}`);
   let gridSquare = document.createElement("div");
   gridSquare.classList.add("grid-square");
+  gridSquare.onclick = function () {
+    let color = colorPicker.value;
+    this.style.backgroundColor = color;
+  }
   gridRow.appendChild(gridSquare);
 }
 
@@ -89,7 +96,7 @@ function removeAllGridChildren() {
 function fillGrid()
 {
   let getRows = document.querySelectorAll(".row");
-  getRows.forEach(function (row) {
+  getRows.forEach(function () {
     let getSquares = document.querySelectorAll(".grid-square");
     getSquares.forEach(function (square) {
       square.style.backgroundColor = colorPicker.value;
@@ -99,10 +106,32 @@ function fillGrid()
 
 function fillUncoloredGrid()
 {
-
+  let getRows = document.querySelectorAll(".row");
+  getRows.forEach(function (row) {
+    let getSquares = document.querySelectorAll(".grid-square");
+    getSquares.forEach(function (square) {
+      if (square.style.backgroundColor = "transparent") {
+        square.style.backgroundColor = colorPicker.value;
+        
+      }
+    });
+  });
+  console.log("fill uncolored");
+  
 }
 
 function clearGrid()
+{
+  let getRows = document.querySelectorAll(".row");
+  getRows.forEach(function (row) {
+    let getSquares = document.querySelectorAll(".grid-square");
+    getSquares.forEach(function (square) {
+      square.style.backgroundColor = "transparent";
+    });
+  });
+}
+
+function menuToggle()
 {
   
 }
