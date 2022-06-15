@@ -52,6 +52,7 @@ function addSquare(rowId) {
   let gridSquare = document.createElement("div");
   gridSquare.classList.add("grid-square");
   gridRow.appendChild(gridSquare);
+  gridSquare.style.backgroundColor = "transparent";
 }
 
 function removeRow() {
@@ -95,7 +96,13 @@ function fillGrid()
 
 function fillUncoloredGrid()
 {
-
+  let getColor = document.getElementById("color-picker").value;
+  let gridsquare = document.querySelectorAll(".grid-square");
+  for(let i=0; i<gridsquare.length; i++){
+    if(gridsquare[i].style.backgroundColor === "transparent"){
+      gridsquare[i].style.backgroundColor = getColor;
+    }
+  }
 }
 
 function clearGrid()
