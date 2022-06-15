@@ -14,7 +14,7 @@ removeColBtn.addEventListener("click", removeCol);
 fill.addEventListener("click", fillGrid);
 fillUncolored.addEventListener("click", fillUncoloredGrid);
 clear.addEventListener("click", clearGrid);
-grid.addEventListener("click", fillsquare);
+document.body.addEventListener("click", fillsquare);
 
 let rowIndex = 0;
 let colIndex = 0;
