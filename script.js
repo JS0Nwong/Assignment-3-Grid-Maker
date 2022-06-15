@@ -14,6 +14,7 @@ removeColBtn.addEventListener("click", removeCol);
 fill.addEventListener("click", fillGrid);
 fillUncolored.addEventListener("click", fillUncoloredGrid);
 clear.addEventListener("click", clearGrid);
+grid.addEventListener("click", fillsquare);
 
 let rowIndex = 0;
 let colIndex = 0;
@@ -102,6 +103,18 @@ function fillUncoloredGrid()
     if(gridsquare[i].style.backgroundColor === "transparent"){
       gridsquare[i].style.backgroundColor = getColor;
     }
+  }
+}
+
+function fillsquare(){
+  let getColor = document.getElementById("color-picker").value;
+  let gridsquare = document.querySelectorAll(".grid-square");
+  for(let i=0; i<gridsquare.length; i++){
+    gridsquare[i].addEventListener("click", function (){
+      if(gridsquare[i].style.backgroundColor != getColor){
+        gridsquare[i].style.backgroundColor = getColor;
+      }
+    });
   }
 }
 
